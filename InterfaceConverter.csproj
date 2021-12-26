@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Authors>Václav Pekárek</Authors>
+		<PackageId>InterfaceConverter.SystemTextJson</PackageId>
+		<PackageTags>json</PackageTags>
+		<Description>System.Text.Json extension for serialization and deserialization of interfaces.</Description>
+		<PackageOutputPath>.\Packages\</PackageOutputPath>
+	</PropertyGroup>
+
+</Project>
