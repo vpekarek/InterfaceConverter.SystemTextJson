@@ -8,9 +8,17 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Authors>Václav Pekárek</Authors>
 		<PackageId>InterfaceConverter.SystemTextJson</PackageId>
-		<PackageTags>json</PackageTags>
+		<PackageTags>json;system.text.json;serialization;deserialization;converter</PackageTags>
 		<Description>System.Text.Json extension for serialization and deserialization of interfaces.</Description>
-		<PackageOutputPath>.\Packages\</PackageOutputPath>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/vpekarek/InterfaceConverter.SystemTextJson</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/vpekarek/InterfaceConverter.SystemTextJson</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="readme.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
 </Project>
