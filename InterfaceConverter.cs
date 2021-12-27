@@ -5,6 +5,8 @@ namespace System.Text.Json;
 public class InterfaceConverter<T> : JsonConverter<T>
     where T : class
 {
+    private static Dictionary<string, Type> _sources = new Dictionary<string, Type>();
+
     public override T? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
         Utf8JsonReader readerClone = reader;
@@ -19,7 +21,7 @@ public class InterfaceConverter<T> : JsonConverter<T>
             throw new JsonException();
         }
 
-        string propertyName = readerClone.GetString();
+        string propertyName = readerClone.GetString() ?? string.Empty;
         if (propertyName != "$type")
         {
             throw new JsonException();
@@ -31,11 +33,10 @@ public class InterfaceConverter<T> : JsonConverter<T>
             throw new JsonException();
         }
 
-        string typeValue = readerClone.GetString();
-        var instance = Activator.CreateInstance(Assembly.GetExecutingAssembly().FullName, typeValue).Unwrap();
-        var entityType = instance.GetType();
+        string typeValue = readerClone.GetString() ?? string.Empty;
+        Type? entityType = GetCustomType(typeValue);
 
-        var deserialized = JsonSerializer.Deserialize(ref reader, entityType, options);
+        var deserialized = JsonSerializer.Deserialize(ref reader, entityType!, options);
         return (T)deserialized;
     }
 
@@ -62,6 +63,28 @@ public class InterfaceConverter<T> : JsonConverter<T>
                     break;
                 }
         }
+    }
+
+    private static Type GetCustomType(string typeName)
+    {
+        if (_sources.ContainsKey(typeName))
+        {
+            return _sources[typeName];
+        }
+
+        List<Assembly> assemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
+
+        foreach (var assembly in assemblies)
+        {
+            Type t = assembly.GetType(typeName, false);
+            if (t != null)
+            {
+                _sources.Add(typeName, t);
+                return t;
+            }
+        }
+
+        throw new ArgumentException("Type " + typeName + " doesn't exist in the current app domain");
     }
 }
 

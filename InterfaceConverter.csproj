@@ -15,6 +15,9 @@
 		<PackageProjectUrl>https://github.com/vpekarek/InterfaceConverter.SystemTextJson</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/vpekarek/InterfaceConverter.SystemTextJson</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
+		<NeutralLanguage>en</NeutralLanguage>
+		<PackageVersion>1.0.3</PackageVersion>
+		<PackageReleaseNotes>Find type in all referenced assemblies.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
