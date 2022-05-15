@@ -87,12 +87,3 @@ public class InterfaceConverter<T> : JsonConverter<T>
         throw new ArgumentException("Type " + typeName + " doesn't exist in the current app domain");
     }
 }
-
-[AttributeUsage(AttributeTargets.Interface, AllowMultiple = false)]
-public class JsonInterfaceConverterAttribute : JsonConverterAttribute
-{
-    public JsonInterfaceConverterAttribute(Type converterType)
-        : base(converterType)
-    {
-    }
-}

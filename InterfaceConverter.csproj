@@ -16,8 +16,8 @@
 		<RepositoryUrl>https://github.com/vpekarek/InterfaceConverter.SystemTextJson</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<NeutralLanguage>en</NeutralLanguage>
-		<PackageVersion>1.0.3</PackageVersion>
-		<PackageReleaseNotes>Find type in all referenced assemblies.</PackageReleaseNotes>
+		<PackageVersion>1.1.0</PackageVersion>
+		<PackageReleaseNotes>Add InterfaceWriteConverter for only serialization without exposing the type of the entity to JSON.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
