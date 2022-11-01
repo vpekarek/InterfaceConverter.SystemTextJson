@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceConverter", "InterfaceConverter.csproj", "{344175D5-4E1F-4CC5-B6C8-C8DAF09EDAB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceConverter.Tests", "..\InterfaceConverter.Tests\InterfaceConverter.Tests.csproj", "{6AE1C2CD-959D-46E4-9E31-B8C11B9D36FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceConverter.Tests", "..\InterfaceConverter.Tests\InterfaceConverter.Tests.csproj", "{6AE1C2CD-959D-46E4-9E31-B8C11B9D36FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "..\TestApp\TestApp.csproj", "{D06B1B21-0C59-490B-9A9B-E57468C3E089}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6AE1C2CD-959D-46E4-9E31-B8C11B9D36FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AE1C2CD-959D-46E4-9E31-B8C11B9D36FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AE1C2CD-959D-46E4-9E31-B8C11B9D36FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06B1B21-0C59-490B-9A9B-E57468C3E089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06B1B21-0C59-490B-9A9B-E57468C3E089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06B1B21-0C59-490B-9A9B-E57468C3E089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06B1B21-0C59-490B-9A9B-E57468C3E089}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
