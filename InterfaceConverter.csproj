@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;netstandard2.1;net5.0;net6.0</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;netstandard2.1;net5.0;net6.0;net7.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<LangVersion>latest</LangVersion>
@@ -17,8 +17,8 @@
 		<RepositoryUrl>https://github.com/vpekarek/InterfaceConverter.SystemTextJson</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<NeutralLanguage>en</NeutralLanguage>
-		<PackageVersion>1.2.0</PackageVersion>
-		<PackageReleaseNotes>Add support for netstandard2.0, netstandard2.1 and net5.0.</PackageReleaseNotes>
+		<PackageVersion>1.2.1</PackageVersion>
+		<PackageReleaseNotes>Add support for net7.0.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -26,7 +26,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="System.Text.Json" Version="6.0.6" />
+		<PackageReference Include="System.Text.Json" Version="7.0.0" />
 	</ItemGroup>
 
 </Project>
