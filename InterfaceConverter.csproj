@@ -17,12 +17,14 @@
 		<RepositoryUrl>https://github.com/vpekarek/InterfaceConverter.SystemTextJson</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<NeutralLanguage>en</NeutralLanguage>
-		<PackageVersion>1.3.1</PackageVersion>
-		<PackageReleaseNotes>Remove System.Text.Json dependency for NET6+ targets.</PackageReleaseNotes>
+		<PackageVersion>1.3.2</PackageVersion>
+		<PackageReleaseNotes>Added package icon.</PackageReleaseNotes>
+		<PackageIcon>icon.png</PackageIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="readme.md" Pack="true" PackagePath="\" />
+		<None Include="icon.png" Pack="true" PackagePath="\"/>
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
